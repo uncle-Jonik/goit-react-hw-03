@@ -1,2 +1,35 @@
 .formicForm {
 }
+.labelForm {
+  font-size: 20px;
+}
+.inputForm {
+  border-radius: 3px;
+  border: none;
+
+  width: 300px;
+  padding: 15px 25px;
+
+  color: #d9f2f0;
+  border-radius: 10px;
+  background: #194658;
+  box-shadow: inset 17px 17px 20px #143746, inset -17px -17px 20px #1e556a;
+}
+.error {
+  color: red;
+}
+.attention {
+  color: orange;
+}
+.errorMessageBox {
+  position: relative;
+}
+.errorMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
