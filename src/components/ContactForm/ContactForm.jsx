@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').max(50, 'Too Long!').required('Required'),
-  number: Yup.number().max(7, 'Too Long!').positive().integer().required('Required'),
+  number: Yup.number().positive().integer().required('Required'),
 });
 
 export const ContactForm = ({ onAdd }) => {
