@@ -6,8 +6,16 @@ export const SearchBar = ({ onChange }) => {
 
   return (
     <>
-      <label htmlFor={usernameFilter}>Find contacts by name</label>
-      <input type="text" id={usernameFilter} name="username" onChange={onChange} />
+      <label htmlFor={usernameFilter} className={css.labelFilter}>
+        Find contacts by name{' '}
+      </label>
+      <input
+        type="text"
+        id={usernameFilter}
+        name="username"
+        onChange={onChange}
+        className={css.inputFilter}
+      />
     </>
   );
 };

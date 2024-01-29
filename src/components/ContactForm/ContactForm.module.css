@@ -1,20 +1,21 @@
 .formicForm {
+  margin-bottom: 70px;
 }
 .labelForm {
   font-size: 20px;
 }
 .inputForm {
   border-radius: 3px;
-  border: none;
+  border-color: #d9f2f0;
 
   width: 300px;
   padding: 15px 25px;
 
   color: #d9f2f0;
   border-radius: 10px;
-  background: #194658;
-  box-shadow: inset 17px 17px 20px #143746, inset -17px -17px 20px #1e556a;
+  background-color: #194658;
 }
+
 .error {
   color: red;
 }
@@ -24,12 +25,23 @@
 .errorMessageBox {
   position: relative;
 }
+.errorMessageBox:not(:last-child) {
+  margin-bottom: 15px;
+}
 .errorMessage {
   display: flex;
   align-items: center;
   justify-content: center;
 
   position: absolute;
-  top: 4px;
-  right: 0;
+  top: 15px;
+  right: 5px;
+}
+.btnForm {
+  margin: 0 auto;
+  padding: 10px 25px;
+
+  color: #194658;
+  border-radius: 10px;
+  background-color: #d9f2f0;
 }
