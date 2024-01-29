@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { ContactList } from './ContactList/ContactList';
 import { SearchBar } from './SearchBar/SearchBar';
+import { ContactForm } from './ContactForm/ContactForm';
 
 export const App = () => {
   const [inputValue, setInputValue] = useState('');
@@ -17,6 +18,11 @@ export const App = () => {
     user.name.toLowerCase().includes(inputValue.toLowerCase())
   );
 
+  const addUsers = newUser => {
+    setData(actualUsers => {
+      return [...actualUsers, newUser];
+    });
+  };
   const deleteUsers = userId =>
     setData(actualUsers => {
       return actualUsers.filter(user => user.id !== userId);
@@ -25,6 +31,7 @@ export const App = () => {
   return (
     <>
       <h1 className={css.title}>Phonebook</h1>
+      <ContactForm onAdd={addUsers} />
       <SearchBar
         onChange={event => {
           setInputValue(event.target.value);
