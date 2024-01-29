@@ -5,10 +5,6 @@ import { SearchBar } from './SearchBar/SearchBar';
 
 export const App = () => {
   const [inputValue, setInputValue] = useState('');
-  const handelClick = event => {
-    setInputValue(event.target.value);
-  };
-
   const [data, setData] = useState([
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
     { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
@@ -16,12 +12,19 @@ export const App = () => {
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
   ]);
 
+  const visibleUsers = data.filter(user =>
+    user.name.toLowerCase().includes(inputValue.toLowerCase())
+  );
+
   return (
     <>
       <h1 className={css.title}>Phonebook</h1>
-      <SearchBar onClick={handelClick} />
-      <ContactList constctsList={data} />
-      <p>{inputValue}</p>
+      <SearchBar
+        onChange={event => {
+          setInputValue(event.target.value);
+        }}
+      />
+      <ContactList constctsList={visibleUsers} />
     </>
   );
 };
