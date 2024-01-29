@@ -44,13 +44,17 @@ export const App = () => {
   return (
     <>
       <h1 className={css.title}>Phonebook</h1>
-      <ContactForm onAdd={addUsers} />
-      <SearchBar
-        onChange={event => {
-          setInputValue(event.target.value);
-        }}
-      />
-      <ContactList constctsList={visibleUsers} onDelete={deleteUsers} />
+      <div className={css.wrapper}>
+        <div className={css.formBox}>
+          <ContactForm onAdd={addUsers} />
+          <SearchBar
+            onChange={event => {
+              setInputValue(event.target.value);
+            }}
+          />
+        </div>
+        <ContactList constctsList={visibleUsers} onDelete={deleteUsers} />
+      </div>
     </>
   );
 };

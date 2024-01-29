@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-color: #0f2c3e;
+  color: #d9f2f0;
+}
+.title {
+  font-size: 80px;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+.wrapper {
+  padding: 40px;
+  width: 780px;
+  max-height: 450px;
+  display: flex;
+  justify-content: space-evenly;
+
+  border-radius: 50px;
+  background-color: #194658;
+}
+/* .formBox {
+} */

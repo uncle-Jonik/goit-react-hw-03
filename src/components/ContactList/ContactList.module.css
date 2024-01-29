@@ -1,7 +1,12 @@
+.list {
+  overflow: auto;
+}
 .listItems {
-  border: black 2px solid;
-  border-radius: 2px;
+  padding: 10px 20px;
+  height: 100px;
 
-  padding: 10px;
-  width: 300px;
+  border-bottom: black 2px solid;
+}
+.listItems:not(:last-child) {
+  margin-bottom: 25px;
 }
